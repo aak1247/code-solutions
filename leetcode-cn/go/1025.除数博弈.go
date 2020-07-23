@@ -15,7 +15,7 @@ func divisorGame(N int) bool {
 }
 
 // n2 dp 小常数
-func divisorGame(N int) bool {
+func divisorGame2(N int) bool {
 	if N == 1 {
 			return false
 	}
@@ -33,4 +33,11 @@ func divisorGame(N int) bool {
 		}
 	}
 	return dp[N]
+}
+
+// 奇数开局下一轮总会回到奇数，最终输
+// 偶数开局 总可以给1 对方拿奇数输
+// o(1)
+func divisorGame3(N int) bool {
+	return N%2==0
 }
